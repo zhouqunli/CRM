@@ -9,14 +9,15 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-public class BaseServiceImpl<T, ID> implements BaseService<T, ID> {
+public class BaseServiceImpl<T,ID> implements BaseService<T,ID> {
     @Autowired
-    private BaseMapper<T, ID> baseMapper;
+    private BaseMapper<T,ID> baseMapper;
 
     /**
      * 如果下面的五个方法都不适用，有可能要使用baseMapper
      * @return
      */
+    @Override
     public BaseMapper<T,ID>getBaseMapper(){
         return baseMapper;
     }
