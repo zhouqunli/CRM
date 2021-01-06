@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    ##版本6以上的默认要加上时区
+    url: jdbc:mysql://localhost:3306/crm?useSSL=false
+    username: root
+    password: 666
+
+    mybatis:
+      mapper-locations: classpath:mapper/*.xml
